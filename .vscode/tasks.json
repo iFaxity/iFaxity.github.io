@@ -6,7 +6,7 @@
   "type": "shell",
   "tasks": [
     {
-      "label": "build",
+      "label": "start",
       "group": "build",
       "problemMatcher": []
     },

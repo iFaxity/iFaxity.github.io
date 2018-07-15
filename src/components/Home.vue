@@ -3,6 +3,7 @@
   h2 Vue Verktyg
 
   router-link(to="/calc") Kalkylatorn
+  router-link(to="/mdc-data-table") MDC Data Table
 </template>
 
 <script>

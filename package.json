@@ -5,23 +5,23 @@
   "author": "iFaxity",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c",
-    "postbuild": "cd test && rollup -c"
+    "start": "parcel index.html --open",
+    "build": "parcel build src/app.js -d build"
   },
   "devDependencies": {
-    "rollup-plugin-buble": "^0.18.0",
-    "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-css-only": "^0.2.0",
-    "rollup-plugin-node-globals": "^1.1.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
-    "rollup-plugin-vue": "^3.0.0",
-    "vue-template-compiler": "^2.5.11"
+    "@vue/component-compiler-utils": "^2.1.0",
+    "autoprefixer": "^8.6.5",
+    "node-sass": "^4.9.2",
+    "parcel-bundler": "^1.9.6",
+    "pug": "^2.0.3"
   },
   "dependencies": {
-    "vue": "^2.5.11",
-    "vue-mdc-adapter": "^0.6.5",
+    "mdc-data-table": "^1.1.0",
+    "vue": "^2.5.16",
+    "vue-hot-reload-api": "^2.3.0",
+    "vue-mdc-web": "^0.35.0",
     "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
     "vuex": "^3.0.1",
     "whatwg-fetch": "^2.0.3"
   }
