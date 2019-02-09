@@ -1,6 +1,6 @@
 <template lang="pug">
 #calc-view
-  h2 Priskalkyleraren
+  h1 Priskalkyleraren
 
   mdc-textfield(v-model="price", label="Cirkapris")
   mdc-textfield(v-model="net", label="Inköpspris")
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Calc",
+  name: 'Calc',
   data() {
     return { net: null, price: null };
   },
@@ -32,7 +32,7 @@ export default {
       return isNaN(price) ? null : price / 1.25;
     },
     grossNumber() {
-    	return this.gross.toString().replace(".", ",");
+    	return this.gross.toString().replace('.', ',');
     }
   },
   methods: {}

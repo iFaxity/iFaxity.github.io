@@ -1,13 +1,12 @@
 //TODO: add vuex to avoid globals and ugly magic in plugins (toaster for example)
-import Vue from "vue";
-import Vuex from "vuex";
-import VueRouter from "vue-router";
-import "whatwg-fetch"; // fetch polyfill
-import "./styles.scss";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import 'whatwg-fetch'; // fetch polyfill
+import './styles.scss';
 
-import VueMDC from "vue-mdc-web";
-import Layout from "./Layout.vue";
-import routes from "./lib/routes";
+import VueMDC from 'vue-mdc-web';
+import Layout from './Layout.vue';
+import routes from './routes';
 import MDCDataTable from './components/MdcTable';
 
 Vue.use(VueRouter);
@@ -15,13 +14,13 @@ Vue.use(VueMDC);
 Vue.use(MDCDataTable);
 
 const Router = new VueRouter({
-  mode: "hash",
-  routes
+  mode: 'history',
+  routes,
 });
 
 // Create vue instance
-const vm = new Vue({
-  el: "#app",
+new Vue({
+  el: '#app',
   router: Router,
   render: h => h(Layout),
 
@@ -32,7 +31,7 @@ const vm = new Vue({
       document.title = match.meta.title;
     }
     next();
-  }
+  },
 });
 
 module.hot && module.hot.accept();

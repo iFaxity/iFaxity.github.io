@@ -1,18 +1,16 @@
 <template lang="pug">
 #home-view
-  h2 Vue Verktyg
+  h1 Verktyg
 
-  router-link(to="/calc") Kalkylatorn
-  router-link(to="/mdc-data-table") MDC Data Table
+  ul
+    li
+      router-link(to="/calc") Kalkylatorn
+    li
+      router-link(to="/mdc-data-table") MDC Data Table
 </template>
 
 <script>
 export default {
-  name: "Home",
-  data() {
-    return {};
-  },
-  computed: {},
-  methods: {}
+  name: 'Home',
 };
 </script>

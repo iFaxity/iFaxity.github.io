@@ -9,20 +9,19 @@
     "build": "parcel build src/app.js -d build"
   },
   "devDependencies": {
-    "@vue/component-compiler-utils": "^2.1.0",
-    "autoprefixer": "^8.6.5",
-    "node-sass": "^4.9.2",
-    "parcel-bundler": "^1.9.6",
-    "pug": "^2.0.3"
+    "@vue/component-compiler-utils": "^2.5.2",
+    "autoprefixer": "^9.4.7",
+    "parcel-bundler": "^1.11.0",
+    "pug": "^2.0.3",
+    "sass": "^1.17.0"
   },
   "dependencies": {
     "mdc-data-table": "^1.1.0",
-    "vue": "^2.5.16",
-    "vue-hot-reload-api": "^2.3.0",
+    "vue": "^2.6.4",
+    "vue-hot-reload-api": "^2.3.1",
     "vue-mdc-web": "^0.35.0",
-    "vue-router": "^3.0.1",
-    "vue-template-compiler": "^2.5.16",
-    "vuex": "^3.0.1",
-    "whatwg-fetch": "^2.0.3"
+    "vue-router": "^3.0.2",
+    "vue-template-compiler": "^2.6.4",
+    "whatwg-fetch": "^3.0.0"
   }
 }
