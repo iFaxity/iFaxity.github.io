@@ -5,7 +5,7 @@
   "author": "iFaxity",
   "license": "MIT",
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel index.html",
     "build": "parcel build src/app.js -d build"
   },
   "devDependencies": {
