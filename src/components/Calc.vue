@@ -10,6 +10,16 @@
 </template>
 
 <script>
+function parseNumber(str) {
+  const idx = str.lastIndexOf(',');
+  
+  if (idx != -1 && str.lastIndexOf('.') < idx) {
+    str = str.substring(0, idx) + '.' + str.substring(idx + 1);
+  }
+  
+  return parseFloat(str);
+}
+
 export default {
   name: 'Calc',
   data() {
@@ -19,16 +29,16 @@ export default {
     margin() {
       if(!this.gross || !this.net) return null;
       
-      const net = parseFloat(this.net);
+      const net = parseNumber(this.net);
       if(isNaN(net)) return null;
     
-    	const diff = 1 - net / this.gross;
+      const diff = 1 - net / this.gross;
       return Math.round(diff * 100);
     },
     gross() {
       if(!this.price) return null;
 
-      const price = parseFloat(this.price);
+      const price = parseNumber(this.price);
       return isNaN(price) ? null : price / 1.25;
     },
     grossNumber() {
